@@ -1,0 +1,22 @@
+import React, { Component } from 'react';
+import { Switch, Route } from "react-router-dom";
+import Boasts from "./Boasts"
+import Roasts from "./Roasts"
+import Broasts from "./Broasts"
+
+
+class App extends Component {
+  render() {
+    return (
+      <section className="todoapp">
+        <Switch>
+          <Route exact path="/boasts" component={Boasts}/>
+          <Route exact path="/roasts" component={Roasts}/>
+          <Route exact path="/" component={Broasts}/>
+        </Switch>
+      </section>
+    );
+  };
+}
+
+export default App
